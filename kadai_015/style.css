@@ -1,0 +1,27 @@
+html{
+  font-family: 20px;
+}
+body
+{
+  font-family:"Arial", "Meiryo", sans-serif;
+  text-align: center;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem; /* ルート要素の2倍 */
+    letter-spacing: 1.2em; /* 文字間をフォントサイズの1.2倍 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 影をつける */
+    border-bottom: 3px solid rgb(115, 115, 114); /* 下線 */
+}
+
+.blue{
+  color:skyblue
+}
+.pink{
+  color:rgb(255, 192, 203);
+}
+
+#basic p {
+  font-weight: bold;
+}
