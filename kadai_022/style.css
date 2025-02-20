@@ -1,0 +1,84 @@
+h1, p, body {
+  margin: 0;
+}
+p,a{
+  font-size: 20px;
+}
+header{
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+header h1{
+  color: rgb(255, 255, 255);
+}
+main{
+  padding: 10px;
+}
+.contents {
+  border: 3px solid rgb(238, 204, 204); /* 線（太さ3px、実線、色rgb(238, 204, 204)）で囲む */
+  flex-basis: 25%; /* 幅は親要素の25% */
+  padding: 10px 15px; /* 要素内の余白は上下10px、左右15px */
+  margin: 20px 0; /* 要素外の余白は上下20px、左右0px */
+  display: flex; /* 子要素の中央揃えのためにflexboxを使用 */
+  justify-content: center; /* 子要素を横方向に中央揃え */
+  align-items: center; /* 子要素を縦方向に中央揃え */
+}
+h2 {
+  font-size: 25px; /* フォントサイズを25pxに設定 */
+  text-decoration: underline; /* 下線を追加 */
+  text-decoration-thickness: 3px; /* 下線の太さを3pxに設定 */
+  text-decoration-style: dotted; /* 下線を点線に設定 */
+  text-decoration-color: rgb(236, 122, 122); /* 下線の色をrgb(236, 122, 122)に設定 */
+  position: relative; /* 「●」記号のために位置調整を行う */
+  padding-left: 20px; /* 「●」記号とテキストの間にスペースを追加 */
+}
+
+h2::before {
+  content: "●"; /* 前に「●」記号を表示 */
+  position: absolute; /* 記号を絶対位置に配置 */
+  left: 0; /* 記号を左端に配置 */
+  color: rgb(239, 111, 139); /* 記号の色をrgb(239, 111, 139)に設定 */
+  font-size: 30px; /* 記号のサイズを調整（必要に応じて変更） */
+  top: 50%; /* 記号を縦方向に中央揃え */
+  transform: translateY(-50%); /* 縦方向の中央揃えを微調整 */
+}
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold; /* 太字 */
+  color: rgb(97, 206, 249); /* 文字色をrgb(97, 206, 249)に設定 */
+}
+.contents img {
+  margin: 10px 0; 
+  width: 70%; 
+}
+footer{
+  background-color: rgb(244, 79, 79);
+  display: flex; /* 中身の要素をflexboxで配置 */
+  justify-content: center; /* 中身の要素を水平方向に中央揃え */
+  align-items: center; /* 中身の要素を垂直方向に中央揃え */
+}
+a {
+  color: rgb(255, 255, 255); 
+}
+
+a:visited {
+  color: rgb(193, 234, 251);
+}
+
+a:hover {
+  color: rgb(245, 178, 168);
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px; /* h2のフォントサイズを30pxに設定 */
+  }
+
+  p {
+    font-size: 25px; /* pのフォントサイズを25pxに設定 */
+  }
+
+  #parent {
+    display: flex; /* Flexboxを使用 */
+    flex-direction: column; /* 要素を縦に並べる */
+  }
+}
